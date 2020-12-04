@@ -1,0 +1,18 @@
+#cloud-config
+hostname: SVRLK8SNTX-MST
+
+rancher:
+  network:
+    interfaces:
+      eth0:
+        address: 10.0.129.31/255.255.255.0
+        gateway: 10.0.129.1
+        mtu: 1500
+        dhcp: false
+    dns:
+      nameservers:
+      - 10.0.127.81
+      - 10.0.127.82
+
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAhgmhTfApXzRwF2EZGU2NzJ5tjbhMVbaKzU6empHjVmET020pG9Gy3NFLAhWgFcaG7t4CBWQEzapJY/wGXj9W5hE9mVFHnJclzLFHg8zf2o1H2ecIj5oK5HeKQE9BoOlncJF6VEJ1trUYouFbO51Kve0kP/9OFx5fgTd4ezCcK+FRNpg1aZYr5oX+DZSUceSIJlAzCOXGiOVI5Kh3CrS5lqD7hkihsL52xrmkGy7pz6X/VdUhvB1jocsl5oPHSLS+azA3TdIcfKwNj6VCf3B+5sIKke4q3rb4dhv/CFdMcaydM23hzjDo5S5YiatTdF+IFyq9caSBqJNsVVik5blgVQ==
